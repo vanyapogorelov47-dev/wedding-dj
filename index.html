@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Музыка на свадьбу · Маргарита и Иван</title>
+<style>
+:root{
+  --paper:#fbf9f6; --card:#ffffff; --ink:#1f1c1a; --mute:#736c65; --faint:#a59d95;
+  --line:#e8e2da; --soft:#f3eee8; --accent:#8c3b3f; --accent-soft:#f6e9e8; --gold:#a07a3c;
+  --serif: "Cormorant Garamond", "Playfair Display", Georgia, "Times New Roman", serif;
+  --sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+body{margin:0; background:var(--paper); color:var(--ink); font:15px/1.55 var(--sans)}
+.page{max-width:900px; margin:0 auto; padding:56px 40px 80px}
+a{color:inherit; text-decoration:none}
+h1,h2,h3{font-family:var(--serif); font-weight:500; margin:0; letter-spacing:.01em}
+
+/* обложка */
+.cover{text-align:center; padding:28px 0 44px; border-bottom:1px solid var(--line)}
+.kicker{font-size:11.5px; letter-spacing:.32em; text-transform:uppercase; color:var(--accent)}
+.cover h1{font-size:58px; line-height:1.05; margin:18px 0 10px}
+.cover h1 i{font-style:italic; color:var(--accent)}
+.cover .names{font-family:var(--serif); font-size:26px; font-style:italic}
+.cover .facts{display:flex; justify-content:center; flex-wrap:wrap; gap:8px 28px; margin-top:26px; color:var(--mute); font-size:13.5px}
+.cover .facts b{color:var(--ink); font-weight:600}
+.lead{max-width:640px; margin:28px auto 0; font-size:15.5px; color:#3d3834}
+
+/* разделы */
+section{margin-top:52px}
+.sec-head{display:flex; align-items:baseline; gap:14px; margin-bottom:18px}
+.sec-num{font-family:var(--serif); font-size:15px; color:var(--accent); font-style:italic}
+.sec-head h2{font-size:30px}
+.sec-sub{color:var(--mute); margin:-8px 0 20px; font-size:14px}
+
+/* как читать */
+.legend{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+.legend div{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; font-size:14px}
+.legend b{display:block; margin-bottom:2px}
+
+/* программа */
+.timeline{position:relative; margin:0; padding:0; list-style:none}
+.timeline li{display:grid; grid-template-columns:86px 1fr; gap:18px; padding:12px 0; border-bottom:1px dashed var(--line)}
+.timeline li:last-child{border-bottom:0}
+.timeline .t{font-family:var(--serif); font-size:24px; line-height:1.1; color:var(--accent)}
+.timeline .w b{display:block; font-size:15.5px}
+.timeline .w span{color:var(--mute); font-size:13.5px}
+
+/* ключевые моменты */
+.cues{display:grid; gap:10px}
+.cue{display:grid; grid-template-columns:44px 1fr auto; gap:16px; align-items:center;
+  background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent);
+  border-radius:12px; padding:14px 18px; break-inside:avoid}
+.cue .n{font-family:var(--serif); font-size:28px; color:var(--accent); text-align:center}
+.cue .moment{font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); font-weight:600}
+.cue .track{font-size:16.5px; font-weight:600; margin-top:2px}
+.cue .artist{color:var(--mute)}
+.cue .extra{font-size:13px; color:var(--mute); margin-top:3px}
+.cue .side{text-align:right; white-space:nowrap}
+.cue .dur{font-variant-numeric:tabular-nums; font-weight:600}
+.cue.alt{border-left-style:dashed}
+.or{text-align:center; font-family:var(--serif); font-style:italic; color:var(--mute); margin:-4px 0}
+.badge{display:inline-block; font-size:11px; font-weight:600; letter-spacing:.04em; padding:3px 8px; border-radius:99px;
+  background:var(--accent); color:#fff; margin-top:5px}
+.badge.q{background:var(--soft); color:var(--gold)}
+
+/* обязательные */
+.must-grid{columns:2; column-gap:28px}
+.must-grid div{break-inside:avoid; padding:7px 0; border-bottom:1px solid var(--line); font-size:14px; display:flex; gap:10px}
+.must-grid .star{color:var(--accent)}
+.must-grid .where{color:var(--faint); font-size:12px; margin-left:auto; white-space:nowrap; padding-left:8px}
+
+/* блоки */
+.block{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:24px 26px 10px; margin-top:18px}
+.block-top{display:flex; justify-content:space-between; gap:20px; align-items:flex-start}
+.block h3{font-size:25px}
+.block .when{font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent); font-weight:600; margin-bottom:4px}
+.block .sum{text-align:right; color:var(--mute); font-size:13px; white-space:nowrap}
+.block .sum b{display:block; font-family:var(--serif); font-size:24px; color:var(--ink); font-weight:500}
+.block .desc{margin:10px 0 14px; color:#3d3834; font-size:14.5px; max-width:640px}
+table{width:100%; border-collapse:collapse}
+td{padding:8px 6px; border-top:1px solid var(--line); vertical-align:top; font-size:14px}
+tr{break-inside:avoid}
+td.i{width:30px; color:var(--faint); font-variant-numeric:tabular-nums; text-align:right; padding-right:12px}
+td.tt b{font-weight:600}
+td.tt .a{color:var(--mute)}
+td.tt .note{display:block; font-size:12.5px; color:var(--gold); font-style:italic; margin-top:1px}
+td.d{width:56px; text-align:right; font-variant-numeric:tabular-nums; color:var(--mute)}
+td.l{width:30px; text-align:right}
+td.l a{color:var(--faint); font-size:13px}
+td.l a:hover{color:var(--accent)}
+tr.must td.tt b::before{content:"★ "; color:var(--accent)}
+tr.must{background:linear-gradient(90deg, var(--accent-soft), transparent 70%)}
+
+/* вопросы, файлы */
+.qa{counter-reset:q; list-style:none; padding:0; margin:0}
+.qa li{counter-increment:q; position:relative; padding:14px 0 14px 46px; border-bottom:1px solid var(--line)}
+.qa li::before{content:counter(q); position:absolute; left:0; top:10px; width:30px; height:30px; border-radius:50%;
+  border:1px solid var(--accent); color:var(--accent); display:grid; place-items:center; font-family:var(--serif); font-size:17px}
+.qa b{display:block}
+.qa span{color:var(--mute); font-size:14px}
+.files{display:grid; gap:10px}
+.file{display:flex; gap:14px; align-items:center; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 16px}
+.file .ic{width:38px; height:38px; border-radius:10px; background:var(--accent-soft); color:var(--accent); display:grid; place-items:center; font-weight:700; font-size:12px}
+.file code{font-size:12.5px; color:var(--mute)}
+.fb{min-width:0; flex:1}
+.file audio{display:block; width:100%; max-width:420px; height:36px; margin-top:8px}
+.dl{display:inline-block; margin-top:8px; font-size:13px; font-weight:600; color:var(--accent); border:1px solid var(--accent); border-radius:99px; padding:5px 14px}
+.dl:hover{background:var(--accent); color:#fff}
+.page:not(.web) .only-web, .web .only-file{display:none}
+.sign{text-align:center; margin-top:60px; font-family:var(--serif); font-size:22px; font-style:italic}
+.sign small{display:block; font-family:var(--sans); font-style:normal; font-size:12px; color:var(--faint); margin-top:6px; letter-spacing:.08em}
+
+@media (max-width:640px){
+  .page{padding:32px 16px 60px}
+  .cover h1{font-size:40px}
+  .legend{grid-template-columns:1fr}
+  .must-grid{columns:1}
+  .block{padding:18px 16px 6px}
+  .cue{grid-template-columns:30px 1fr; }
+  .cue .side{grid-column:2; text-align:left}
+}
+@page{size:A4; margin:14mm 12mm}
+@media print{
+  body{background:#fff; font-size:13px}
+  .page{padding:0; max-width:none}
+  .cover{padding-top:40px}
+  section{margin-top:34px}
+  .block, .cue, .file, .legend div{box-shadow:none}
+  .block{break-inside:auto}
+  .block-top, .block .desc{break-after:avoid}
+  .sec-head{break-after:avoid}
+  .new-page{break-before:page}
+  td.l{display:none}
+}
+</style>
+</head>
+<body>
+<div class="page web">
+
+<header class="cover">
+  <div class="kicker">Музыкальный план вечера · для диджея</div>
+  <h1>Музыка <i>на&nbsp;свадьбу</i></h1>
+  <div class="names">Маргарита и Иван</div>
+  <div class="facts">
+    <span><b>23 октября 2026</b>, пятница</span>
+    <span><b>18:00 – 23:00</b></span>
+    <span>Дворец Кваренги, зал <b>«Мьюзик-холл»</b> · Казанская, 7</span>
+  </div>
+  <p class="lead">Здравствуйте! Здесь собрано всё, что мы хотим услышать на&nbsp;свадьбе: треки под конкретные
+    моменты, музыка по&nbsp;этапам вечера и&nbsp;пара вопросов к&nbsp;вам. Внутри блоков порядок свободный,
+    выстраивайте его по&nbsp;залу. Всё, что есть в&nbsp;списке, нам было&nbsp;бы приятно услышать.</p>
+</header>
+
+<section>
+  <div class="sec-head"><span class="sec-num">I</span><h2>Как читать этот план</h2></div>
+  <div class="legend">
+    <div><b>★ Обязательно</b>Такие треки должны прозвучать. Остальное — пул, из&nbsp;которого можно брать сколько нужно.</div>
+    <div><b>Версия важна</b>Если указаны кавер, LAB или «не&nbsp;оригинал» — нужна именно эта запись, а&nbsp;не&nbsp;первая попавшаяся.</div>
+    <div><b>Время — ориентир</b>Длительности блоков примерные: где-то можно добрать на&nbsp;свой вкус, где-то не&nbsp;доиграть.</div>
+    <div class="only-file"><b>Файлы в комплекте</b>Две обрезанные версии лежат рядом с&nbsp;этим документом. Ставить нужно их, а&nbsp;не&nbsp;полные треки.</div>
+    <div class="only-web"><b>Две обрезки — отдельными файлами</b>Первый танец и&nbsp;общий танец мы порезали сами. Послушать иПослушать можно в&nbsp;конце страницы, сами mp3 пришлём.nbsp;скачать — вПослушать можно в&nbsp;конце страницы, сами mp3 пришлём.nbsp;конце страницы. Ставить нужно их, а&nbsp;не&nbsp;полные треки.</div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">II</span><h2>Программа вечера</h2></div>
+  <ul class="timeline">
+    <li><div class="t">17:30</div><div class="w"><b>Сбор гостей</b><span>Фотографируются на лестнице, проходят в зал. Спокойный фон.</span></div></li>
+    <li><div class="t">18:00</div><div class="w"><b>Банкет</b><span>Выход пары, клятвы, первый танец, заказные танцы — по сценарию ведущего.</span></div></li>
+    <li><div class="t">19:30</div><div class="w"><b>Танцевальная сиеста</b><span>Ретро, джаз, свинг: спокойно повайбовать и потанцевать.</span></div></li>
+    <li><div class="t">21:30</div><div class="w"><b>Вечеринка</b><span>Танцпол на полную, потом песни, которые зал поёт хором.</span></div></li>
+    <li><div class="t">23:00</div><div class="w"><b>Завершение вечера</b><span>Гости расходятся. Дальше — несколько треков для своих.</span></div></li>
+  </ul>
+</section>
+
+<section class="new-page">
+  <div class="sec-head"><span class="sec-num">III</span><h2>Ключевые моменты</h2></div>
+  <p class="sec-sub">Конкретный трек под конкретный момент. Время и порядок — по сценарию ведущего.</p>
+  <div class="cues" id="cues"></div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">IV</span><h2>Обязательно должно прозвучать</h2></div>
+  <p class="sec-sub">Все ★ на одной странице, чтобы ничего не потерялось.</p>
+  <div class="must-grid" id="must"></div>
+</section>
+
+<section class="new-page">
+  <div class="sec-head"><span class="sec-num">V</span><h2>Музыка по этапам</h2></div>
+  <p class="sec-sub">Ссылка ↗ у трека открывает поиск в Яндекс.Музыке.</p>
+  <div id="blocks"></div>
+</section>
+
+<section class="new-page">
+  <div class="sec-head"><span class="sec-num">VI</span><h2>Что хотим уточнить у вас</h2></div>
+  <ol class="qa">
+    <li><b>Могут ли гости подходить и просить поставить песни по ходу вечера?</b>
+      <span>Нам важно понять, как вы обычно с этим работаете и можно ли так делать.</span></li>
+    <li><b>Танец невесты с папой — один из двух треков</b>
+      <span>Urge Overkill — «Girl, You'll Be a Woman Soon» или Бонд с кнопкой — «Маяки 2.0». Окончательный выбор сообщим.</span></li>
+    <li><b>Блок «Ностальгия»</b>
+      <span>Песни из детства и советские, с вайбом «поплакать». Хотим посоветоваться: уместно ли и в какой момент.</span></li>
+    <li><b>После 23:00</b>
+      <span>Когда гости разойдутся, хотим ещё несколько треков для своих (блок «Когда гости разошлись»). Получится ли остаться?</span></li>
+    <li><b>Версии LAB с Антоном Беляевым</b>
+      <span>Несколько треков нужны именно в версии из шоу LAB — они есть в Яндекс.Музыке. Если какой-то не найдётся, напишите.</span></li>
+  </ol>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-num">VII</span><h2>Файлы в комплекте</h2></div>
+  <div class="files">
+    <div class="file"><div class="ic">01</div><div class="fb"><b>Первый танец</b> · Бигуди &amp; Евгений Гришковец — «На заре», обрезка 2:46<br><code>01 Первый танец — Бигуди и Гришковец — На заре.mp3</code>
+      <audio class="only-web" controls preload="none" src="01-pervyj-tanec.mp3"></audio><a class="dl only-web" href="01-pervyj-tanec.mp3" download="01 Первый танец — Бигуди и Гришковец — На заре.mp3">Скачать mp3</a></div></div>
+    <div class="file"><div class="ic">02</div><div class="fb"><b>Общий танец, старт дискотеки</b> · Adriano Celentano — «Stivali E Colbacco», обрезка 2:31<br><code>02 Общий танец — Adriano Celentano — Stivali E Colbacco.mp3</code>
+      <audio class="only-web" controls preload="none" src="02-obshchij-tanec.mp3"></audio><a class="dl only-web" href="02-obshchij-tanec.mp3" download="02 Общий танец — Adriano Celentano — Stivali E Colbacco.mp3">Скачать mp3</a></div></div>
+    <div class="file"><div class="ic">CSV</div><div><b>Весь плейлист таблицей</b> · открывается в Excel, удобно сверяться<br><code>плейлист.csv</code><a class="dl only-web" href="playlist.csv" download="плейлист.csv">Скачать CSV</a></div></div>
+  </div>
+</section>
+
+<p class="sign">Спасибо! Ждём классный вечер.<small>МАРГАРИТА И ИВАН</small></p>
+</div>
+
+<script>
+const SEED={"blocks":[{"id":"key","name":"★ Ключевые моменты","target":30,"noTime":false},{"id":"calm","name":"Сбор гостей и банкет · спокойно","target":105,"noTime":false},{"id":"live","name":"Банкет · живой фон","target":85,"noTime":false},{"id":"siesta","name":"Танцевальная сиеста · ретро, джаз","target":120,"noTime":false},{"id":"dance","name":"Вечеринка · танцуем","target":45,"noTime":false},{"id":"sing","name":"Вечеринка · поём всем залом","target":45,"noTime":false},{"id":"nostalgia","name":"Ностальгия · по согласованию","target":10,"noTime":false},{"id":"after","name":"Когда гости разошлись","target":25,"noTime":false},{"id":"reserve","name":"Запас · на усмотрение диджея","target":30,"noTime":false},{"id":"stop","name":"Не играть","target":0,"noTime":true}],"tracks":[{"id":"t1","artist":"Grouplove","title":"Itchin\u0027 on a Photograph","dur":259,"durSrc":"manual","block":"key","guest":"","note":"Выход пары в зал","must":true,"src":"csv"},{"id":"t2","artist":"Ludovico Einaudi, Daniel Hope \u0026 I Virtuosi Italiani","title":"Experience","dur":317,"durSrc":"manual","block":"key","guest":"","note":"Чтение клятв","must":true,"src":"csv"},{"id":"t3","artist":"Бигуди \u0026 Евгений Гришковец","title":"На заре (обрезка)","dur":166,"durSrc":"manual","block":"key","guest":"","note":"Первый танец · файл 01 в комплекте","must":true,"src":"csv"},{"id":"t4","artist":"Urge Overkill","title":"Girl, You\u0027ll Be a Woman Soon","dur":189,"durSrc":"manual","block":"key","guest":"","note":"Танец невесты с папой · вариант 1 из 2, выбор уточним","must":true,"src":"csv"},{"id":"t5","artist":"Бонд с кнопкой","title":"Маяки 2.0","dur":189,"durSrc":"manual","block":"key","guest":"","note":"Танец невесты с папой · вариант 2 из 2, выбор уточним","must":true,"src":"csv"},{"id":"t6","artist":"Des\u0027ree","title":"Life","dur":216,"durSrc":"manual","block":"key","guest":"","note":"Танец невесты с мамой","must":true,"src":"csv"},{"id":"t7","artist":"Дайте танк (!)","title":"Люди","dur":162,"durSrc":"manual","block":"key","guest":"","note":"Танец с Лилей","must":true,"src":"csv"},{"id":"t8","artist":"Marcelo","title":"Me gustas tu","dur":238,"durSrc":"manual","block":"key","guest":"","note":"Танец с одногруппницами","must":true,"src":"csv"},{"id":"t9","artist":"Adriano Celentano","title":"Stivali E Colbacco (обрезка)","dur":151,"durSrc":"manual","block":"key","guest":"","note":"Конец официальной части · общий танец, старт дискотеки · файл 02","must":true,"src":"csv"},{"id":"t10","artist":"Washed Out","title":"Before","dur":286,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t11","artist":"Karen Elson","title":"Lay All Your Love On Me","dur":249,"durSrc":"manual","block":"calm","guest":"","note":"Кавер, не оригинал ABBA","must":false,"src":"csv"},{"id":"t12","artist":"Nick Cave \u0026 The Bad Seeds","title":"Where the Wild Roses Grow (Original Guide Vocal Version)","dur":226,"durSrc":"manual","block":"calm","guest":"","note":"Именно эта версия","must":false,"src":"csv"},{"id":"t13","artist":"Céu","title":"Sangria","dur":222,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t14","artist":"Gorillaz","title":"Aries (feat. Peter Hook \u0026 Georgia)","dur":253,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t15","artist":"Keira Knightley","title":"Lost Stars","dur":240,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t16","artist":"Gotye","title":"Somebody That I Used To Know","dur":241,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t17","artist":"James Blunt","title":"You\u0027re Beautiful","dur":212,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t18","artist":"Tito \u0026 Tarantula","title":"After Dark","dur":251,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t19","artist":"Ms. Lauryn Hill","title":"Killing Me Softly","dur":322,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t20","artist":"Tom Rosenthal","title":"Not a Catastrophe","dur":196,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t21","artist":"Arctic Monkeys","title":"505","dur":253,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t22","artist":"Сплин","title":"Романс","dur":205,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t23","artist":"Ed Sheeran","title":"Perfect","dur":263,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t24","artist":"Gilbert O\u0027Sullivan","title":"Alone Again (Naturally)","dur":221,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t25","artist":"Ed Sheeran","title":"Thinking Out Loud","dur":282,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t26","artist":"Людмила Берлинская, Игорь Капитанников, ансамбль «Верные друзья»","title":"Ты мне веришь?","dur":174,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t27","artist":"Elvis Presley","title":"Can\u0027t Help Falling in Love","dur":181,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t28","artist":"Grover Washington, Jr. \u0026 Bill Withers","title":"Just the Two of Us","dur":237,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t29","artist":"Pink Floyd","title":"Comfortably Numb","dur":382,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t30","artist":"Леонид Агутин \u0026 Therr Maitz","title":"Что происходит? (LAB с Антоном Беляевым)","dur":295,"durSrc":"manual","block":"calm","guest":"","note":"Версия LAB","must":false,"src":"csv"},{"id":"t31","artist":"Gruppa Skryptonite \u0026 Therr Maitz","title":"Ты не верь слезам (LAB с Антоном Беляевым)","dur":247,"durSrc":"manual","block":"calm","guest":"","note":"Версия LAB","must":false,"src":"csv"},{"id":"t32","artist":"Therr Maitz \u0026 Ёлка","title":"Земля (LAB с Антоном Беляевым)","dur":245,"durSrc":"manual","block":"calm","guest":"","note":"Версия LAB","must":false,"src":"csv"},{"id":"t33","artist":"Элджей \u0026 Therr Maitz","title":"Пальма-де-Майорка (LAB с Антоном Беляевым)","dur":227,"durSrc":"manual","block":"calm","guest":"","note":"Версия LAB","must":false,"src":"csv"},{"id":"t34","artist":"Антон Беляев \u0026 Therr Maitz","title":"Всё пройдёт (LAB с Антоном Беляевым)","dur":null,"durSrc":null,"block":"calm","guest":"","note":"Версия LAB","must":false,"src":"csv"},{"id":"t35","artist":"Илья Лагутенко","title":"Дельфины (LAB с Антоном Беляевым)","dur":268,"durSrc":"manual","block":"calm","guest":"","note":"Версия LAB","must":false,"src":"csv"},{"id":"t36","artist":"DPR IAN","title":"So Beautiful","dur":187,"durSrc":"manual","block":"calm","guest":"","note":"","must":false,"src":"csv"},{"id":"t37","artist":"Vanille","title":"Suivre le soleil","dur":158,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t38","artist":"Amy Winehouse","title":"Our Day Will Come","dur":170,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t39","artist":"Deep Purple","title":"Hush","dur":266,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t40","artist":"Keira Knightley","title":"Tell Me If You Wanna Go Home","dur":220,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t41","artist":"Keira Knightley","title":"Coming Up Roses","dur":193,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t42","artist":"Chris Norman","title":"Stumblin\u0027 In","dur":237,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t43","artist":"Queen","title":"Somebody To Love","dur":298,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t44","artist":"Marshmello \u0026 Jonas Brothers","title":"Leave Before You Love Me","dur":155,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t45","artist":"Максим Леонидов","title":"Видение","dur":195,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t46","artist":"Fidel\u0027s Kids and the Black Sea Horns","title":"Words","dur":207,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t47","artist":"Reamonn","title":"Tonight","dur":215,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t48","artist":"Arctic Monkeys","title":"Do I Wanna Know?","dur":273,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t49","artist":"Arctic Monkeys","title":"Why\u0027d You Only Call Me When You\u0027re High?","dur":161,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t50","artist":"Earth, Wind \u0026 Fire","title":"September","dur":215,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t51","artist":"PIZZA","title":"Улыбка","dur":184,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t52","artist":"PIZZA","title":"Романс","dur":234,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t53","artist":"Gruppa Skryptonite \u0026 Therr Maitz","title":"Любите, девушки (LAB с Антоном Беляевым)","dur":284,"durSrc":"manual","block":"live","guest":"","note":"Версия LAB","must":false,"src":"csv"},{"id":"t54","artist":"Gruppa Skryptonite \u0026 Therr Maitz","title":"Maria (LAB с Антоном Беляевым)","dur":226,"durSrc":"manual","block":"live","guest":"","note":"Версия LAB","must":false,"src":"csv"},{"id":"t55","artist":"NILETTO \u0026 Therr Maitz","title":"Улыбка (LAB с Антоном Беляевым)","dur":187,"durSrc":"manual","block":"live","guest":"","note":"Версия LAB","must":false,"src":"csv"},{"id":"t56","artist":"Armand de Paris","title":"La Seine","dur":163,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t57","artist":"Milky Chance","title":"Stolen Dance","dur":314,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t58","artist":"Norma Tanega","title":"You\u0027re Dead","dur":143,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t59","artist":"Ottawan","title":"Hands Up","dur":289,"durSrc":"manual","block":"live","guest":"","note":"","must":false,"src":"csv"},{"id":"t60","artist":"Игорь Бутман \u0026 Олег Аккуратов","title":"Those Were the Days (feat. Eduard Zizak \u0026 Sergey Korchagin)","dur":324,"durSrc":"manual","block":"siesta","guest":"","note":"","must":true,"src":"csv"},{"id":"t61","artist":"ABBA","title":"Lay All Your Love On Me","dur":274,"durSrc":"manual","block":"siesta","guest":"","note":"Оригинал ABBA","must":true,"src":"csv"},{"id":"t62","artist":"Adriano Celentano","title":"Il Tempo Se Ne Va","dur":231,"durSrc":"manual","block":"siesta","guest":"","note":"","must":true,"src":"csv"},{"id":"t63","artist":"Pat Boone","title":"Autumn Leaves","dur":177,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t64","artist":"Yann Tiersen","title":"La valse d\u0027Amélie","dur":135,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t65","artist":"Jazzistics","title":"Personal Jesus (feat. Karen Souza)","dur":198,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t66","artist":"George White Group","title":"Gypsy Woman (She\u0027s Homeless)","dur":160,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t67","artist":"Jerry Lee Lewis","title":"Great Balls of Fire","dur":153,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t68","artist":"Chuck Berry","title":"You Never Can Tell","dur":162,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t69","artist":"Taco","title":"Puttin\u0027 on the Ritz","dur":281,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t70","artist":"Nina Simone","title":"Sinnerman","dur":620,"durSrc":"manual","block":"siesta","guest":"","note":"10 минут, можно увести раньше","must":false,"src":"csv"},{"id":"t71","artist":"Ray Charles","title":"Hit the Road Jack","dur":119,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t72","artist":"Kurt Elling","title":"Nature Boy","dur":369,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t73","artist":"Karen Souza","title":"Creep","dur":211,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t74","artist":"Bruno Mars","title":"Leave The Door Open","dur":242,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t75","artist":"Bruno Mars","title":"Love\u0027s Train","dur":307,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t76","artist":"Camélia Jordana","title":"Et si tu n\u0027existais pas (À toi, Joe Dassin)","dur":215,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t77","artist":"Michael Bublé","title":"Sway","dur":188,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t78","artist":"Michael Bublé","title":"Such a Night","dur":197,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t79","artist":"Michael Bublé","title":"L O V E","dur":170,"durSrc":"manual","block":"siesta","guest":"","note":"","must":false,"src":"csv"},{"id":"t80","artist":"Antoha MC","title":"Ритм сердца","dur":285,"durSrc":"manual","block":"dance","guest":"","note":"","must":true,"src":"csv"},{"id":"t81","artist":"Леонид Агутин","title":"Остров","dur":233,"durSrc":"manual","block":"dance","guest":"","note":"","must":true,"src":"csv"},{"id":"t82","artist":"HOLLYFLAME","title":"Любочка","dur":160,"durSrc":"manual","block":"dance","guest":"","note":"","must":true,"src":"csv"},{"id":"t83","artist":"CREAM SODA \u0026 Леонид Агутин","title":"Никаких больше вечеринок (LAB с Антоном Беляевым)","dur":null,"durSrc":null,"block":"dance","guest":"","note":"Версия LAB, не оригинал Cream Soda","must":true,"src":"csv"},{"id":"t84","artist":"Lou Bega","title":"Mambo No. 5 (a Little Bit of...)","dur":220,"durSrc":"manual","block":"dance","guest":"","note":"","must":false,"src":"csv"},{"id":"t85","artist":"ZAZ","title":"Je veux","dur":215,"durSrc":"manual","block":"dance","guest":"","note":"","must":false,"src":"csv"},{"id":"t86","artist":"GOARTUR","title":"Иностранец","dur":196,"durSrc":"manual","block":"sing","guest":"","note":"","must":false,"src":"csv"},{"id":"t87","artist":"Chris Isaak","title":"Wicked Game","dur":286,"durSrc":"manual","block":"sing","guest":"","note":"","must":false,"src":"csv"},{"id":"t88","artist":"The Hatters","title":"Весело","dur":225,"durSrc":"manual","block":"sing","guest":"","note":"","must":false,"src":"csv"},{"id":"t89","artist":"Валерий Золотухин","title":"Разговор со счастьем","dur":156,"durSrc":"manual","block":"sing","guest":"","note":"","must":false,"src":"csv"},{"id":"t90","artist":"The Hatters","title":"Мрачные звоночки","dur":128,"durSrc":"manual","block":"sing","guest":"","note":"","must":false,"src":"csv"},{"id":"t91","artist":"Сплин","title":"Феллини","dur":277,"durSrc":"manual","block":"sing","guest":"","note":"","must":false,"src":"csv"},{"id":"t92","artist":"Николай Носков","title":"Это здорово","dur":253,"durSrc":"manual","block":"sing","guest":"","note":"","must":false,"src":"csv"},{"id":"t93","artist":"Антон Токарев","title":"Седьмой лепесток","dur":200,"durSrc":"manual","block":"sing","guest":"","note":"","must":false,"src":"csv"},{"id":"t94","artist":"Альянс","title":"На заре","dur":345,"durSrc":"manual","block":"sing","guest":"","note":"Оригинал 1987, не версия первого танца","must":false,"src":"csv"},{"id":"t95","artist":"O-Zone","title":"Dragostea Din Tei","dur":216,"durSrc":"manual","block":"sing","guest":"","note":"","must":false,"src":"csv"},{"id":"t96","artist":"a-ha","title":"Take On Me","dur":229,"durSrc":"manual","block":"sing","guest":"","note":"","must":false,"src":"csv"},{"id":"t97","artist":"Земфира","title":"Хочешь?","dur":198,"durSrc":"manual","block":"sing","guest":"","note":"","must":false,"src":"csv"},{"id":"t98","artist":"Татьяна Воронина \u0026 Павел Смеян","title":"Ветер перемен","dur":312,"durSrc":"manual","block":"nostalgia","guest":"","note":"","must":false,"src":"csv"},{"id":"t99","artist":"Анна Герман","title":"Эхо любви («Мы — эхо, мы — эхо…»)","dur":197,"durSrc":"manual","block":"nostalgia","guest":"","note":"","must":false,"src":"csv"},{"id":"t100","artist":"Liliana Bush \u0026 Ensemble Vanya","title":"Дорога","dur":244,"durSrc":"manual","block":"after","guest":"","note":"Рита и Максим","must":false,"src":"csv"},{"id":"t101","artist":"ZAZ feat. Till Lindemann","title":"Le jardin des larmes","dur":241,"durSrc":"manual","block":"after","guest":"","note":"Танец Риты и Вани","must":false,"src":"csv"},{"id":"t102","artist":"Крематорий","title":"Мусорный ветер","dur":173,"durSrc":"manual","block":"after","guest":"","note":"Танец Риты и Вани","must":false,"src":"csv"},{"id":"t103","artist":"Low Roar","title":"Don\u0027t Be So Serious","dur":372,"durSrc":"manual","block":"after","guest":"","note":"Танец Риты и Вани","must":false,"src":"csv"},{"id":"t104","artist":"Beach House","title":"Space Song","dur":320,"durSrc":"manual","block":"after","guest":"","note":"","must":false,"src":"csv"},{"id":"t105","artist":"Bosson","title":"One in a Million","dur":214,"durSrc":"manual","block":"reserve","guest":"","note":"","must":false,"src":"csv"},{"id":"t106","artist":"Matt Maltese","title":"As the World Caves In","dur":219,"durSrc":"manual","block":"reserve","guest":"","note":"","must":false,"src":"csv"},{"id":"t107","artist":"Portishead","title":"Glory Box","dur":309,"durSrc":"manual","block":"reserve","guest":"","note":"","must":false,"src":"csv"},{"id":"t108","artist":"Lady Gaga \u0026 Bruno Mars","title":"Die With A Smile","dur":250,"durSrc":"manual","block":"reserve","guest":"","note":"","must":false,"src":"csv"},{"id":"t109","artist":"Scorpions","title":"Still Loving You","dur":387,"durSrc":"manual","block":"reserve","guest":"","note":"","must":false,"src":"csv"},{"id":"t110","artist":"Talking Heads","title":"Once In a Lifetime","dur":260,"durSrc":"manual","block":"reserve","guest":"","note":"","must":false,"src":"csv"}]};
+const META = {
+  calm:     {when:'17:30 · сбор и начало банкета', desc:'Гости собираются, фотографируются, рассаживаются. Негромко, фоном — разговорам не мешать.'},
+  live:     {when:'18:00 – 19:30 · банкет', desc:'Банкет в разгаре. Фон чуть бодрее и веселее, но всё ещё фон.'},
+  siesta:   {when:'19:30 – 21:30 · танцевальная сиеста', desc:'Первые танцы без надрыва: ретро, джаз, свинг. Время спокойно повайбовать и потанцевать — особенно под ★.'},
+  dance:    {when:'с 21:30 · вечеринка', desc:'Разгон танцпола: плясать и петь на разрыв. ★ — обязательно. Блок короткий, добирайте на свой вкус в том же духе.'},
+  sing:     {when:'21:30 – 23:00 · вечеринка', desc:'То, что зал будет петь хором. Можно чередовать с танцевальным блоком.'},
+  nostalgia:{when:'по согласованию', desc:'Песни из детства и советские — поплакать. Это идея, которую хотим обсудить с вами (вопрос 3).'},
+  after:    {when:'после 23:00 · для своих', desc:'Когда гости разошлись. «Дорога» — для Риты и Максима. Ещё три трека — медленный танец Риты и Вани, момент на ваше усмотрение.'},
+  reserve:  {when:'в любой момент', desc:'Нравится, но не разложено по блокам. Используйте там, где подходит.'}
+};
+const ROMAN = ['I','II','III','IV','V','VI','VII','VIII','IX','X'];
+const esc = s => String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = s => s==null ? '—' : Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+const fmtMin = s => { const m = Math.round(s/60); return m >= 60 ? Math.floor(m/60)+' ч '+(m%60 ? m%60+' мин' : '') : m+' мин'; };
+const ya = t => 'https://music.yandex.ru/search?text=' + encodeURIComponent(t.artist+' '+t.title.replace(/\s*\((обрезка|LAB[^)]*)\)/g,' ').replace(/«[^»]*»/g,''));
+const byBlock = id => SEED.tracks.filter(t => t.block === id);
+const blockName = id => (SEED.blocks.find(b => b.id === id) || {}).name || '';
+
+/* ключевые моменты: два варианта танца с папой — одной карточкой «или» */
+let cues = '', n = 0;
+const key = byBlock('key');
+key.forEach((t, i) => {
+  const parts = t.note.split(' · ');
+  const isAlt = /вариант 2/.test(t.note);
+  if(isAlt) cues += '<div class="or">или</div>';
+  else n++;
+  const file = /файл (\d+)/.exec(t.note);
+  const extra = parts.slice(1).filter(p => !/^файл/.test(p) && !/^вариант/.test(p)).join(' · ');
+  cues += '<div class="cue'+(isAlt ? ' alt' : '')+'">'
+    + '<div class="n">'+(isAlt ? '' : n)+'</div>'
+    + '<div><div class="moment">'+esc(parts[0])+'</div>'
+    + '<div class="track">'+esc(t.title)+' <span class="artist">· '+esc(t.artist)+'</span></div>'
+    + (extra ? '<div class="extra">'+esc(extra)+'</div>' : '')
+    + '</div><div class="side"><div class="dur">'+fmt(t.dur)+'</div>'
+    + (file ? '<span class="badge">файл '+file[1]+'</span>' : '')
+    + (/вариант 1/.test(t.note) ? '<span class="badge q">выбор уточним</span>' : '')
+    + '</div></div>';
+});
+document.getElementById('cues').innerHTML = cues;
+
+/* все обязательные, кроме ключевых моментов */
+document.getElementById('must').innerHTML = SEED.tracks.filter(t => t.must && t.block !== 'key').map(t =>
+  '<div><span class="star">★</span><span><b>'+esc(t.title)+'</b> — '+esc(t.artist)+'</span><span class="where">'
+  + esc(blockName(t.block).split(' · ')[0]) + '</span></div>').join('');
+
+/* блоки */
+let bi = 0;
+document.getElementById('blocks').innerHTML = SEED.blocks.filter(b => META[b.id]).map(b => {
+  const list = byBlock(b.id);
+  if(!list.length) return '';
+  const total = list.reduce((a,t) => a + (t.dur||0), 0);
+  const nd = list.filter(t => t.dur == null).length;
+  return '<div class="block"><div class="block-top"><div>'
+    + '<div class="when">'+esc(META[b.id].when)+'</div><h3>'+esc(b.name.replace(' · ', ' — '))+'</h3></div>'
+    + '<div class="sum"><b>≈ '+fmtMin(total)+'</b>'+list.length+' '+plural(list.length,'трек','трека','треков')+(nd ? ', '+nd+' без времени' : '')+'</div></div>'
+    + '<p class="desc">'+esc(META[b.id].desc)+'</p><table>'
+    + list.map((t,i) => '<tr'+(t.must ? ' class="must"' : '')+'><td class="i">'+(i+1)+'</td>'
+      + '<td class="tt"><b>'+esc(t.title)+'</b> <span class="a">— '+esc(t.artist)+'</span>'
+      + (t.note ? '<span class="note">'+esc(t.note)+'</span>' : '')+'</td>'
+      + '<td class="d">'+fmt(t.dur)+'</td>'
+      + '<td class="l"><a href="'+ya(t)+'" target="_blank" title="Найти в Яндекс.Музыке">↗</a></td></tr>').join('')
+    + '</table></div>';
+}).join('');
+
+function plural(n, one, few, many){
+  const a = n % 10, b = n % 100;
+  if(a === 1 && b !== 11) return one;
+  if(a >= 2 && a <= 4 && (b < 10 || b >= 20)) return few;
+  return many;
+}
+</script>
+</body>
+</html>
